@@ -116,3 +116,15 @@ const displayProducts = (filteredProducts) => {
 };
 
 displayProducts(data);
+
+searchInput.addEventListener('keyup', (e) => {
+    const value = e.target.value.toLowerCase();
+
+    if (value) {
+        displayProducts(data.filter(item => item.name.toLocaleLowerCase().indexOf(value) !== -1));
+    }
+    else {
+        displayProducts(data);
+    }
+})
+
