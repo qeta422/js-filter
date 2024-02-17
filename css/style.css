@@ -1,0 +1,62 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  padding: 1.2rem 0;
+}
+
+.filter {
+  flex: 1;
+  padding: 3rem 0;
+}
+.filter__input--search {
+  padding: 0.5rem;
+  width: 10rem;
+  border: 1px solid #777;
+}
+.filter__menu .cats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter__menu .cats__cat {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+}
+
+.content {
+  flex: 3;
+}
+.content__products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.content__products--product {
+  width: 21rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.content__products--product img {
+  width: 11rem;
+  height: 21rem;
+  object-fit: contain;
+}
+.content__products--product .name {
+  font-weight: 300;
+}
+
+.container {
+  display: flex;
+  padding: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
