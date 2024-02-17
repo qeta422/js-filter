@@ -67,7 +67,7 @@ const data = [
         id: 9,
         name: "Anne Klein Women's Leather Strap Watch",
         img: "img/watch9luxury.jpg",
-        price: 60,
+        price: 259,
         cat: "luxury",
     },
 
@@ -126,5 +126,29 @@ searchInput.addEventListener('keyup', (e) => {
     else {
         displayProducts(data);
     }
-})
+});
 
+const setCategories = () => {
+    const allCats = data.map(item => item.cat)
+    const categories = [
+        "All",
+        ...allCats.filter((item, i) => {
+        return allCats.indexOf(item) === i
+    }),
+];
+    categoriesContainer.innerHTML = categories.map(cat =>
+        `
+        <li class= "cats__cat">${cat}</li>
+        `
+        ).join("");
+
+        categoriesContainer.addEventListener('click', (e) => {
+            const selectedCat = (e.target.textContent);
+
+            selectedCat === "All" 
+            ? displayProducts(data) 
+            : displayProducts(data.filter((item) => item.cat === selectedCat))
+        });
+};
+
+setCategories();
